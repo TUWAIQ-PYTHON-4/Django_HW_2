@@ -1,11 +1,9 @@
-import null as null
 from django.db import models
-from collections import MutableMapping, MutableSequence
 
 class Project(models.Model):
     name = models.CharField(max_length=100, help_text="project name")
-    date = models.DateField(auto_now_add=True, help_text="Date the Prject .")
-    completion_time = models.DateField(null, help_text="Completion time.")
+    date = models.DateField(auto_now_add=True, help_text="Date of the Project .")
+    completion_time = models.DateField(null=True, help_text="Completion time.")
 
 
 class Task(models.Model):
