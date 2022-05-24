@@ -2,10 +2,10 @@ from django.db import models
 
 
 # Create your models here.
-class project(models.Model):
+class Project(models.Model):
     name = models.CharField(max_length=100, help_text='project name')
-    creation_time = models.DateTimeFieldField(auto_now_add=True, help_text='creation time')
-    completion_time = models.DateTimeField(text='completion time', null=True)
+    creation_time = models.DateTimeField(auto_now_add=True, help_text='creation time')
+    completion_time = models.DateTimeField(help_text='completion time', null=True)
 
 
 class Task(models.Model):
