@@ -12,4 +12,5 @@ class Task(models.Model):
     description= models.TextField( help_text= "  ")
     time_estimate = models.IntegerField(help_text= "  ")
     completed = models.BooleanField(default = False)
+    project = models.ForeignKey(Project, on_delete=models.CASCADE)
 
