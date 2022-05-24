@@ -8,6 +8,7 @@ class Project(models.Model):
     completion_time = models.DateTimeField(None, help_text = 'Completion time')
 
 class Task(models.Model):
+    Project = models.ForeignKey(Project, on_delete= models.CASCADE)
     title = models.CharField(max_length = 100, help_text = 'Task Title')
     description = models.TextField(help_text = 'Task description')
     time_estimate = models.IntegerField(help_text = 'Estimated time')
