@@ -1,6 +1,7 @@
 from django.db import models
 
 # Create your models here.
+
 class Project(models.Model):
    name = models.CharField(max_length=100, help_text="The name of the Project.")
    creation_time = models.DateTimeField(auto_now_add=True, help_text = "The date and time the project was created.")
@@ -18,3 +19,5 @@ class Task(models.Model):
 
    def __str__(self):
        return self.title
+
+   image_field = models.ImageField(upload_to="images/")
