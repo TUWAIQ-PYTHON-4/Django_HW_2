@@ -1,0 +1,23 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+{%for i in tasklist%}
+<ul>
+    Task:{{i.task.title}}
+    <li>
+        <span>{{i.task.description}}</span>
+    </li>
+    <li>
+        <span>{{i.task.time_estimate}}</span>
+    </li>
+
+</ul>
+{%endfor%}
+</body>
+</html>
